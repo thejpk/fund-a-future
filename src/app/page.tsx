@@ -1,103 +1,119 @@
-import Image from "next/image";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-[#181C23] min-h-screen text-white font-sans p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Top Left */}
+      <section className="bg-[#232733] rounded-xl p-8 flex flex-col justify-between">
+        <header className="flex items-center justify-between mb-6">
+          <span className="font-bold text-lg flex items-center gap-2">
+            <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+            Fund a Future
+          </span>
+          <span className="text-sm">Start a 529 Plan</span>
+        </header>
+        <div>
+          <h1 className="text-3xl font-bold mb-4">Give the Gift of Education</h1>
+          <p className="text-gray-300 mb-6">
+            Saving for college shouldn’t be a solo journey. Start a 529 plan and accept donations from friends and family.
+          </p>
+          <div className="flex gap-4 mb-4">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Start a 529 Plan</button>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Donate to a Child's Fund</button>
+          </div>
+          <div className="text-blue-400 hover:underline cursor-pointer mb-4">Track Progress Together →</div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <footer className="flex gap-8 text-gray-400 text-sm mt-6">
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </footer>
+      </section>
+
+      {/* Top Right */}
+      <section className="bg-[#232733] rounded-xl p-8 flex flex-col justify-between">
+        <header className="flex items-center justify-between mb-6">
+          <span className="font-bold text-lg flex items-center gap-2">
+            <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+            Fund a Future
+          </span>
+          <span className="text-sm">Log in</span>
+        </header>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Start a 529 Plan for Your Child</h2>
+          <ul className="list-disc ml-6 text-gray-300 mb-6">
+            <li>Tax free growth and withdrawals</li>
+            <li>Flexible use for college, K-12; or student loans</li>
+            <li>Minimal impact on financial aid</li>
+          </ul>
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Select Your State</button>
+        </div>
+      </section>
+
+      {/* Bottom Left */}
+      <section className="bg-[#232733] rounded-xl p-8 flex flex-col justify-between">
+        <header className="flex items-center justify-between mb-6">
+          <span className="font-bold text-lg flex items-center gap-2">
+            <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+            Fund a Future
+          </span>
+          <span className="text-sm">Log in</span>
+        </header>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Give the Gift of Education</h2>
+          <p className="text-gray-300 mb-6">
+            Your contribution can help a child reach their dreams.
+          </p>
+          <input
+            className="w-full mb-4 px-4 py-2 rounded-full bg-[#181C23] text-gray-200 border border-gray-700"
+            placeholder="Search by name: location or occasion"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition mb-4">Find a Child to Support →</button>
+          <div className="bg-[#181C23] rounded-lg p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+              <span>Emma</span>
+              <span className="text-xs text-gray-400">Age a. Dollus TX</span>
+            </div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+              <span>Jayden</span>
+              <span className="text-xs text-gray-400">Age 3. Atlanta GA</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+              <span>Awa</span>
+              <span className="text-xs text-gray-400">Age 3. Seattle WA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Right */}
+      <section className="bg-[#232733] rounded-xl p-8 flex flex-col justify-between">
+        <header className="flex items-center justify-between mb-6">
+          <span className="font-bold text-lg flex items-center gap-2">
+            <span className="bg-blue-700 rounded-full w-6 h-6 inline-block"></span>
+            Fund a Future
+          </span>
+          <span className="text-sm">Log Out</span>
+        </header>
+        <div>
+          <h2 className="text-3xl font-bold mb-2">Your Education Savings Dashboard</h2>
+          <div className="text-gray-300 mb-2">Welcome: <span className="font-semibold">Sarah!</span></div>
+          <div className="mb-4">
+            <span className="text-gray-400">Total Saved:</span>
+            <span className="text-2xl font-bold text-blue-400 ml-2">$3,200</span>
+            <span className="text-gray-400 ml-2">of $10,000 goal</span>
+          </div>
+          <div className="flex gap-4 mb-4">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Invite Friends</button>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Update Story</button>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Link 529 Provider →</button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
